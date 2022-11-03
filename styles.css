@@ -12,7 +12,8 @@ body {
 .darken {
     filter: brightness(0.7);
 }
-#dialogArea {
+
+.dialogArea {
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -25,12 +26,12 @@ body {
   align-items: center;
 }
 
-#dialogArea section{
+.dialogArea section{
   width: 400px;
   height: 200px;
   background: white;
 }
 
-#dialogArea.show {
+.dialogArea.show {
   visibility: visible;
 }

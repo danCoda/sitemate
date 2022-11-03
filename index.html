@@ -11,21 +11,30 @@
 </head>
 
 <body>
-    <section>
-        <button onclick="showDialog('Are you sure you want to continue?')">Click me</button>
-    </section>
-    <section>
-        <button onclick="showDialog('Test 2')">Click me 2</button>
-    </section>
+    <section class="dialogConsumer" data-message='Are you sure you want to continue?'>
+        <button>Click me</button>
+        <article></article>
+        <div class="dialogArea">
+            <section>
+                <div>Modal</div>
 
-    <div id="dialogArea">
-        <section>
-            <div>Modal</div>
+                <button onclick="closeDialog(true)">Yes</button>
+                <button onclick="closeDialog(false)">Cancel</button>
+            </section>
+        </div>
+    </section>
+    <section class="dialogConsumer" data-message='Test 2'>
+        <button>Click me 2</button>
+        <article></article>
+        <div class="dialogArea">
+            <section>
+                <div>Modal</div>
 
-            <button onclick="">Yes</button>
-            <button onclick="hideDialog()">Cancel</button>
-        </section>
-    </div>
+                <button onclick="closeDialog(true)">Yes</button>
+                <button onclick="closeDialog(false)">Cancel</button>
+            </section>
+        </div>
+    </section>
 </body>
 
 </html>
