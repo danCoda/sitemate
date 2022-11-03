@@ -1,0 +1,36 @@
+html {
+  background: grey;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.darken {
+    filter: brightness(0.7);
+}
+#dialogArea {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dialogArea section{
+  width: 400px;
+  height: 200px;
+  background: white;
+}
+
+#dialogArea.show {
+  visibility: visible;
+}
