@@ -2,6 +2,7 @@ html {
   background: grey;
   width: 100%;
   height: 100%;
+  animation-duration: 2s;
 }
 
 body {
@@ -9,8 +10,26 @@ body {
   height: 100%;
 }
 
-.darken {
-    filter: brightness(0.7);
+button {
+  margin: 20px;
+}
+
+#darkenFilter {
+  filter: brightness(0.7);
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.show {
+  visibility: visible;
+}
+
+.dialogConsumer {
+  margin: 50px;
 }
 
 .dialogComponent {
@@ -24,14 +43,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: bl;
 }
 
-.dialogComponent section{
+.dialogComponent section {
   width: 400px;
   height: 200px;
   background: white;
-}
-
-.dialogComponent.show {
-  visibility: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
 }

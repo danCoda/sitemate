@@ -1,17 +1,5 @@
-const body = document.querySelector("body");
-
-const dialogs = document.querySelectorAll("dialogComponent");
-
-const dialogMessage = document.querySelector(".dialogComponent div");
-const dialogYesButton = document.querySelector(
-  ".dialogComponent button:first-child"
-);
-const dialogCancelButton = document.querySelector(
-  ".dialogComponent button:last-child"
-);
-
+const darkFilter = document.querySelector("#darkenFilter");
 const dialogConsumers = document.querySelectorAll(".dialogConsumer");
-console.log(dialogConsumers.length);
 
 dialogConsumers.forEach((consumer) => {
   const messageForComponent = consumer.getAttribute("data-message");
@@ -21,20 +9,23 @@ dialogConsumers.forEach((consumer) => {
   const component = consumer.querySelector(".dialogComponent");
   const componentMessage = component.querySelector("section div");
 
-  const dialogYesButton = component.querySelector("button:first-of-type");
-  const dialogNoButton = component.querySelector("button:last-of-type");
+  const componentYesButton = component.querySelector("button:first-of-type");
+  const componentNoButton = component.querySelector("button:last-of-type");
 
   componentTriggerButton.addEventListener("click", () => {
+    darkFilter.classList.add("show");
     component.classList.add("show");
     componentMessage.textContent = messageForComponent;
   });
 
-  dialogYesButton.addEventListener("click", () => {
+  componentYesButton.addEventListener("click", () => {
+    darkFilter.classList.remove("show");
     component.classList.remove("show");
     componentOutputMessage.textContent = "You just clicked 'Yes'";
   });
 
-  dialogNoButton.addEventListener("click", () => {
+  componentNoButton.addEventListener("click", () => {
+    darkFilter.classList.remove("show");
     component.classList.remove("show");
     componentOutputMessage.textContent = "You just clicked 'No'";
   });
